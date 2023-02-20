@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../component/Shared/Footer/Footer";
+
 import Header from "../component/Shared/Header/Header";
 
 class Main extends React.Component {
@@ -9,7 +9,7 @@ class Main extends React.Component {
       <div>
         <Header></Header>
         <Outlet></Outlet>
-        <Footer></Footer>
+
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useLoaderData } from "react-router-dom";
 import LeftSide from './LeftSide';
-import RightSide from './RightSide';
+// import RightSide from './RightSide';
 
 import './SinglePetPage.css';
 

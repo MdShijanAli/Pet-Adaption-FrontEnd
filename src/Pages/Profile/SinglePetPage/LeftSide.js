@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Nav, NavItem, NavLink } from 'react-bootstrap';
-// import { NavLink } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+import './LeftSide.css';
+import { NavLink } from 'react-router-dom';
 
 
 class LeftSide extends React.Component {
@@ -44,7 +45,9 @@ class LeftSide extends React.Component {
             <Nav >
 
                 {
-                    pets.map(pet => <NavItem key={pet._id} style={{ color: `blue` }}><NavLink >{pet?.name}</NavLink> </NavItem>)
+                    pets.map(pet => <NavLink key={pet?._id} to={`/pets/${pet._id}`} className="d-block w-100 fs-4 text-decoration-none">
+                        {pet?.name}
+                    </NavLink>)
                 }
 
             </Nav>

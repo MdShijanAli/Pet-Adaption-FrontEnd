@@ -7,6 +7,7 @@ export class AuthContext extends Component {
     sign: {},
   };
   signUp = (info) => {
+    localStorage.setItem("userEmail", JSON.stringify(info?.email));
     this.setState({ sign: info });
     fetch("http://localhost:5000/signup", {
       method: "POST",
@@ -17,11 +18,12 @@ export class AuthContext extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("User Data", data);
+        // const userEmail = JSON.parse(localStorage.getItem('userEmail'));
+        // console.log(userEmail);
         if (data.acknowledged) {
-          localStorage.setItem("userEmail", JSON.stringify(info?.email));
-          toast("Service added successfully!", {
-            icon: "👏",
-          });
+          toast.success("Successfully Sign Up!");
+          window.location.href = '/profile';
         }
       });
   };
@@ -37,13 +39,21 @@ export class AuthContext extends Component {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.acknowledged) {
-          toast.success("Now you are our logged in!");
+        const userEmail = JSON.parse(localStorage.getItem('userEmail'));
+        console.log(userEmail);
+        if (userEmail == data.email) {
+          toast.success("Successfully logged in!");
+          window.location.href = '/profile';
         }
       });
   };
   logOut = () => {
     localStorage.clear();
+    const userEmail = JSON.parse(localStorage.getItem('userEmail'));
+    if (userEmail == null) {
+      toast.success("Logout Successful!");
+      window.location.href = '/';
+    }
   };
 
   render() {

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 import './Profile.css';
@@ -49,7 +49,7 @@ class Profile extends React.Component {
                                         <div class="profile-header-info " style={{ height: `200px`, marginLeft: `220px` }}>
                                             <h4 class="m-t-10 m-b-5 " >{user?.firstName} {user?.lastName}</h4>
                                             <p class="m-b-10">{user?.title ? user?.title : 'Title'}</p>
-                                            <NavLink to="/settings" class="btn btn-sm btn-info mb-2">Edit Profile</NavLink>
+                                            <Link to="/settings" class="btn btn-sm btn-primary mb-2">Edit Profile</Link>
                                         </div>
 
                                     </div>
