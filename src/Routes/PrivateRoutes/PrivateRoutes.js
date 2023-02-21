@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
 import NavigateComponents from "./NavigateComponent";
 class PrivateRoutes extends Component {
   state = {

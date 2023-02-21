@@ -1,6 +1,5 @@
 import { RouterProvider } from "react-router-dom";
 
-import Main from "./Layout/Main";
 import router from "./Routes/Routes/Routes";
 import "bootstrap/dist/css/bootstrap.min.css";
 

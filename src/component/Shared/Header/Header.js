@@ -55,14 +55,14 @@ class Header extends React.Component {
   render() {
     const user = localStorage.getItem("userEmail");
     const userEmail = JSON.parse(user);
-    const { logOut, sign } = this.context;
+    const { logOut } = this.context;
     const handleLogOut = () => {
       logOut()
         .then(() => {
           console.log('successfuly logout');
           toast.success('You have logged Out Successfully!!')
           if (!userEmail) {
-            return <a href="/profile"></a>;
+            return <Link href="/profile"></Link>;
           }
         })
         .catch(error => {

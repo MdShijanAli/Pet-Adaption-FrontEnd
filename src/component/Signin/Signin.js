@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
-
 import AuthContexts from "../context/authContext";
 
 class LoginForm extends Component {
@@ -18,7 +16,7 @@ class LoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    const { signUp, logIn } = this.context;
+    const { logIn } = this.context;
 
     const logInInfo = this.state;
 

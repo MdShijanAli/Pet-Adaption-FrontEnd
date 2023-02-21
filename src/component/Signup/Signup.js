@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import toast from "react-hot-toast";
+
 import AuthContexts from "../context/authContext";
 
 class Signup extends Component {
@@ -18,7 +18,7 @@ class Signup extends Component {
     photo: "",
     password: "",
     confirmPassword: "",
-    photo: "",
+
   };
 
   // img url
@@ -37,7 +37,7 @@ class Signup extends Component {
 
     const formData = new FormData();
     formData.append("image", image);
-    const { signUp, logIn } = this.context;
+    const { signUp } = this.context;
     const url =
       "https://api.imgbb.com/1/upload?key=c993754e5e7bdf8ca9412defbbd79642";
     fetch(url, {

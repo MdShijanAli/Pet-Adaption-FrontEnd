@@ -1,8 +1,6 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import LoginForm from "../../component/Signin/Signin";
-import Signin from "../../component/Signin/Signin";
-import Signup from "../../component/Signup/Signup";
+
 import Main from "../../Layout/Main";
 import GetPetById from "../../Pages/GetPetById/GetPetById";
 
