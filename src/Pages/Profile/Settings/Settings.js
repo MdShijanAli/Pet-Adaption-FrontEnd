@@ -44,6 +44,7 @@ class Settings extends Component {
                 console.log(data);
                 // update state with new user data
                 toast.success('Profile Updated')
+                window.location.href = '/profile';
             })
             .catch(error => console.error(error));
 

@@ -55,7 +55,7 @@ class MyPosts extends Component {
                                 <img style={{ height: `350px` }} src={pet?.image} class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h3 class="card-title">{pet?.name} </h3>
-                                    <h5> {pet?.adoptionStatus} </h5>
+                                    <h5> {pet?.price} </h5>
 
                                     <Link to={`/pets/${pet._id}`}>
                                         <button type="button" class="btn btn-outline-primary my-3">View Details</button>

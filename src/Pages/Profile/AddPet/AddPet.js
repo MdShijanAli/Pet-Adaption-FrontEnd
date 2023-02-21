@@ -87,6 +87,7 @@ class AddPet extends Component {
               console.log(data);
               if (data.acknowledged) {
                 toast.success("Your Data has been recorded");
+                window.location.href = '/my-posts';
               }
             });
         }
